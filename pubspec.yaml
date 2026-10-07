@@ -1,0 +1,40 @@
+name: date_write
+description: "个人日记本 —— Windows 与 Android 双端本地日记应用"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # 本地存储：Android 用 sqflite，Windows 用 sqflite_common_ffi
+  sqflite: ^2.4.4
+  sqflite_common: ^2.5.13
+  sqflite_common_ffi: ^2.4.3
+  path_provider: ^2.1.6
+  path: ^1.9.1
+
+  # 导出
+  file_picker: ^13.1.0
+  docx_creator: ^1.4.0
+  pdf: ^3.13.1
+
+  # 正文 Markdown 渲染
+  flutter_markdown: ^0.7.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # PDF 导出必须内嵌中文字体，否则中文会显示成方框
+    - assets/fonts/
